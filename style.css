@@ -1,0 +1,538 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #f8fafc;
+    min-height: 100vh;
+    padding: 24px;
+    font-weight: 400;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    animation: fadeIn 0.6s ease-out;
+    border: 1px solid #e5e7eb;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+.report-header {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    color: white;
+    padding: 48px 40px;
+    text-align: center;
+    position: relative;
+}
+
+.report-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
+    pointer-events: none;
+}
+
+.report-header h1 {
+    font-size: 2.75rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    position: relative;
+    z-index: 1;
+}
+
+.school-info {
+    position: relative;
+    z-index: 1;
+}
+
+.school-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #f3f4f6;
+    font-weight: 600;
+}
+
+.school-info p {
+    color: #d1d5db;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+/* Student Information */
+.student-info {
+    padding: 40px;
+    background: #ffffff;
+}
+
+.student-card {
+    background: #f9fafb;
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid #f3f4f6;
+    transition: all 0.3s ease;
+}
+
+.student-card:hover {
+    border-color: #e5e7eb;
+    transform: translateY(-1px);
+}
+
+.student-details h3 {
+    color: #111827;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #f3f4f6;
+    transition: all 0.2s ease;
+}
+
+.info-item:hover {
+    border-color: #e5e7eb;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+}
+
+.label {
+    font-weight: 500;
+    color: #6b7280;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.value {
+    font-weight: 600;
+    color: #111827;
+    font-size: 1rem;
+}
+
+.gpa {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-weight: 700;
+    box-shadow: 0 2px 4px -1px rgba(16, 185, 129, 0.2);
+}
+
+/* Grades Section */
+.grades-section {
+    padding: 40px;
+    background: #ffffff;
+}
+
+.grades-section h3 {
+    color: #111827;
+    font-size: 1.75rem;
+    margin-bottom: 32px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+
+.table-container {
+    overflow-x: auto;
+    border-radius: 16px;
+    border: 1px solid #f3f4f6;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.grades-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 0.875rem;
+}
+
+.grades-table thead {
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.grades-table th {
+    padding: 20px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6b7280;
+}
+
+.grades-table tbody tr {
+    border-bottom: 1px solid #f3f4f6;
+    transition: all 0.2s ease;
+}
+
+.grades-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.grades-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.grades-table td {
+    padding: 20px 16px;
+    vertical-align: middle;
+}
+
+.subject {
+    font-weight: 600;
+    color: #111827;
+    font-size: 0.875rem;
+}
+
+.grade {
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    min-width: 60px;
+    font-size: 0.875rem;
+    display: inline-block;
+}
+
+.grade-a {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    box-shadow: 0 2px 4px -1px rgba(16, 185, 129, 0.2);
+}
+
+.grade-b {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    box-shadow: 0 2px 4px -1px rgba(245, 158, 11, 0.2);
+}
+
+.grade-c {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    box-shadow: 0 2px 4px -1px rgba(239, 68, 68, 0.2);
+}
+
+.percentage {
+    font-weight: 600;
+    color: #111827;
+    font-size: 0.875rem;
+}
+
+.credits {
+    font-weight: 500;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.comment {
+    color: #4b5563;
+    line-height: 1.5;
+    max-width: 240px;
+    font-size: 0.875rem;
+}
+
+/* Summary Section */
+.summary-section {
+    padding: 40px;
+    background: #f9fafb;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.summary-item {
+    background: white;
+    padding: 32px 24px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #f3f4f6;
+    transition: all 0.3s ease;
+}
+
+.summary-item:hover {
+    transform: translateY(-2px);
+    border-color: #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.summary-item h4 {
+    color: #6b7280;
+    margin-bottom: 12px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.summary-value {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    letter-spacing: -0.025em;
+}
+
+/* Footer */
+.report-footer {
+    padding: 40px;
+    background: #1f2937;
+    color: white;
+}
+
+.signature-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.signature {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.signature p {
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.signature p:last-child {
+    margin-top: 20px;
+    color: #d1d5db;
+    font-size: 0.75rem;
+}
+
+.disclaimer {
+    text-align: center;
+    color: #9ca3af;
+    border-top: 1px solid #374151;
+    padding-top: 24px;
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 16px;
+    }
+    
+    .container {
+        border-radius: 16px;
+    }
+    
+    .report-header {
+        padding: 32px 24px;
+    }
+    
+    .report-header h1 {
+        font-size: 2rem;
+    }
+    
+    .school-info h2 {
+        font-size: 1.25rem;
+    }
+    
+    .school-info p {
+        font-size: 1rem;
+    }
+    
+    .student-info,
+    .grades-section,
+    .summary-section,
+    .report-footer {
+        padding: 24px;
+    }
+    
+    .student-card {
+        padding: 24px;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 16px;
+    }
+    
+    .grades-table {
+        font-size: 0.75rem;
+    }
+    
+    .grades-table th,
+    .grades-table td {
+        padding: 12px 8px;
+    }
+    
+    .comment {
+        max-width: none;
+    }
+    
+    .signature-section {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .summary-item {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+    
+    .report-header {
+        padding: 24px 16px;
+    }
+    
+    .report-header h1 {
+        font-size: 1.75rem;
+        letter-spacing: -0.025em;
+    }
+    
+    .school-info h2 {
+        font-size: 1.125rem;
+    }
+    
+    .student-info,
+    .grades-section,
+    .summary-section,
+    .report-footer {
+        padding: 16px;
+    }
+    
+    .student-card {
+        padding: 20px;
+    }
+    
+    .grades-table th,
+    .grades-table td {
+        padding: 10px 6px;
+        font-size: 0.75rem;
+    }
+    
+    .summary-item {
+        padding: 20px;
+    }
+    
+    .summary-value {
+        font-size: 1.875rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    
+    .container {
+        box-shadow: none;
+        border-radius: 0;
+        max-width: none;
+        border: none;
+    }
+    
+    .report-header {
+        background: #f8f9fa !important;
+        color: #1a1a1a !important;
+    }
+    
+    .report-header::before {
+        display: none;
+    }
+    
+    .report-footer {
+        background: #f8f9fa !important;
+        color: #1a1a1a !important;
+    }
+    
+    .grades-table thead {
+        background: #f8f9fa !important;
+        color: #1a1a1a !important;
+    }
+    
+    .grade {
+        background: #e5e7eb !important;
+        color: #1a1a1a !important;
+        border: 1px solid #d1d5db;
+        box-shadow: none;
+    }
+    
+    .summary-item {
+        box-shadow: none;
+        border: 1px solid #d1d5db;
+    }
+    
+    .student-card {
+        border: 1px solid #d1d5db;
+        box-shadow: none;
+    }
+    
+    .info-item {
+        border: 1px solid #e5e7eb;
+        box-shadow: none;
+    }
+    
+    .signature {
+        background: #f8f9fa !important;
+        border: 1px solid #d1d5db !important;
+    }
+}
