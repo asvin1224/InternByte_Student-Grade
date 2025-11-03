@@ -6,209 +6,155 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', system-ui, sans-serif;
     line-height: 1.6;
-    color: #1a1a1a;
-    background: #f8fafc;
+    color: #2d3748;
+    background: #f7fafc;
     min-height: 100vh;
-    padding: 24px;
-    font-weight: 400;
+    padding: 20px;
 }
 
 /* Container */
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     background: white;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    animation: fadeIn 0.6s ease-out;
-    border: 1px solid #e5e7eb;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    border: 1px solid #e2e8f0;
 }
 
 /* Header */
 .report-header {
-    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    background: #4f46e5;
     color: white;
-    padding: 48px 40px;
+    padding: 40px 32px;
     text-align: center;
-    position: relative;
-}
-
-.report-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
-    pointer-events: none;
 }
 
 .report-header h1 {
-    font-size: 2.75rem;
-    margin-bottom: 16px;
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    position: relative;
-    z-index: 1;
-}
-
-.school-info {
-    position: relative;
-    z-index: 1;
+    font-size: 2.25rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 .school-info h2 {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-    color: #f3f4f6;
-    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+    color: #e0e7ff;
+    font-weight: 500;
 }
 
 .school-info p {
-    color: #d1d5db;
-    font-size: 1.125rem;
+    color: #c7d2fe;
+    font-size: 1rem;
     font-weight: 400;
 }
 
 /* Student Information */
 .student-info {
-    padding: 40px;
+    padding: 32px;
     background: #ffffff;
 }
 
 .student-card {
-    background: #f9fafb;
-    border-radius: 16px;
-    padding: 32px;
-    border: 1px solid #f3f4f6;
-    transition: all 0.3s ease;
-}
-
-.student-card:hover {
-    border-color: #e5e7eb;
-    transform: translateY(-1px);
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 28px;
+    border: 1px solid #e2e8f0;
 }
 
 .student-details h3 {
-    color: #111827;
-    font-size: 1.5rem;
-    margin-bottom: 24px;
+    color: #1a202c;
+    font-size: 1.375rem;
+    margin-bottom: 20px;
     font-weight: 600;
-    letter-spacing: -0.025em;
 }
 
 .info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
 }
 
 .info-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 20px;
+    padding: 12px 16px;
     background: white;
-    border-radius: 12px;
-    border: 1px solid #f3f4f6;
-    transition: all 0.2s ease;
-}
-
-.info-item:hover {
-    border-color: #e5e7eb;
-    transform: translateY(-1px);
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
 }
 
 .label {
     font-weight: 500;
-    color: #6b7280;
+    color: #718096;
     font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
 }
 
 .value {
     font-weight: 600;
-    color: #111827;
-    font-size: 1rem;
+    color: #2d3748;
+    font-size: 0.95rem;
 }
 
 .gpa {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: #10b981;
     color: white;
-    padding: 8px 16px;
-    border-radius: 12px;
+    padding: 6px 12px;
+    border-radius: 6px;
     font-weight: 700;
-    box-shadow: 0 2px 4px -1px rgba(16, 185, 129, 0.2);
 }
 
 /* Grades Section */
 .grades-section {
-    padding: 40px;
+    padding: 32px;
     background: #ffffff;
 }
 
 .grades-section h3 {
-    color: #111827;
-    font-size: 1.75rem;
-    margin-bottom: 32px;
+    color: #1a202c;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
     text-align: center;
     font-weight: 600;
-    letter-spacing: -0.025em;
 }
 
 .table-container {
     overflow-x: auto;
-    border-radius: 16px;
-    border: 1px solid #f3f4f6;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background: white;
 }
 
 .grades-table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
     font-size: 0.875rem;
 }
 
 .grades-table thead {
-    background: #f9fafb;
-    border-bottom: 1px solid #e5e7eb;
+    background: #f7fafc;
 }
 
 .grades-table th {
-    padding: 20px 16px;
+    padding: 16px;
     text-align: left;
     font-weight: 600;
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #6b7280;
+    font-size: 0.8rem;
+    color: #4a5568;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .grades-table tbody tr {
-    border-bottom: 1px solid #f3f4f6;
-    transition: all 0.2s ease;
+    border-bottom: 1px solid #f1f5f9;
 }
 
 .grades-table tbody tr:hover {
-    background: #f9fafb;
+    background: #f8fafc;
 }
 
 .grades-table tbody tr:last-child {
@@ -216,197 +162,183 @@ body {
 }
 
 .grades-table td {
-    padding: 20px 16px;
+    padding: 16px;
     vertical-align: middle;
 }
 
 .subject {
     font-weight: 600;
-    color: #111827;
+    color: #2d3748;
     font-size: 0.875rem;
 }
 
 .grade {
-    font-weight: 700;
-    padding: 8px 12px;
-    border-radius: 8px;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 4px;
     text-align: center;
     color: white;
-    min-width: 60px;
-    font-size: 0.875rem;
+    min-width: 50px;
+    font-size: 0.8rem;
     display: inline-block;
 }
 
 .grade-a {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    box-shadow: 0 2px 4px -1px rgba(16, 185, 129, 0.2);
+    background: #10b981;
 }
 
 .grade-b {
-    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-    box-shadow: 0 2px 4px -1px rgba(245, 158, 11, 0.2);
+    background: #f59e0b;
 }
 
 .grade-c {
-    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-    box-shadow: 0 2px 4px -1px rgba(239, 68, 68, 0.2);
+    background: #ef4444;
 }
 
 .percentage {
-    font-weight: 600;
-    color: #111827;
+    font-weight: 500;
+    color: #2d3748;
     font-size: 0.875rem;
 }
 
 .credits {
     font-weight: 500;
-    color: #6b7280;
+    color: #718096;
     font-size: 0.875rem;
 }
 
 .comment {
-    color: #4b5563;
-    line-height: 1.5;
-    max-width: 240px;
-    font-size: 0.875rem;
+    color: #4a5568;
+    line-height: 1.4;
+    max-width: 280px;
+    font-size: 0.825rem;
 }
 
 /* Summary Section */
 .summary-section {
-    padding: 40px;
-    background: #f9fafb;
+    padding: 32px;
+    background: #f8fafc;
 }
 
 .summary-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
 .summary-item {
     background: white;
-    padding: 32px 24px;
-    border-radius: 16px;
+    padding: 24px 20px;
+    border-radius: 8px;
     text-align: center;
-    border: 1px solid #f3f4f6;
-    transition: all 0.3s ease;
-}
-
-.summary-item:hover {
-    transform: translateY(-2px);
-    border-color: #e5e7eb;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
 }
 
 .summary-item h4 {
-    color: #6b7280;
-    margin-bottom: 12px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.summary-value {
-    font-size: 2.25rem;
-    font-weight: 700;
-    color: #1f2937;
-    letter-spacing: -0.025em;
-}
-
-/* Footer */
-.report-footer {
-    padding: 40px;
-    background: #1f2937;
-    color: white;
-}
-
-.signature-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
-    margin-bottom: 32px;
-}
-
-.signature {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 24px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.signature p {
+    color: #718096;
     margin-bottom: 8px;
     font-size: 0.875rem;
     font-weight: 500;
 }
 
+.summary-value {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+/* Footer */
+.report-footer {
+    padding: 32px;
+    background: #2d3748;
+    color: white;
+}
+
+.signature-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.signature {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.signature p {
+    margin-bottom: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
 .signature p:last-child {
-    margin-top: 20px;
-    color: #d1d5db;
+    margin-top: 16px;
+    color: #cbd5e0;
     font-size: 0.75rem;
 }
 
 .disclaimer {
     text-align: center;
-    color: #9ca3af;
-    border-top: 1px solid #374151;
-    padding-top: 24px;
+    color: #a0aec0;
+    border-top: 1px solid #4a5568;
+    padding-top: 20px;
     font-size: 0.875rem;
-    font-weight: 400;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
-        padding: 16px;
+        padding: 12px;
     }
     
     .container {
-        border-radius: 16px;
+        border-radius: 8px;
     }
     
     .report-header {
-        padding: 32px 24px;
+        padding: 28px 20px;
     }
     
     .report-header h1 {
-        font-size: 2rem;
+        font-size: 1.875rem;
     }
     
     .school-info h2 {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
     }
     
     .school-info p {
-        font-size: 1rem;
+        font-size: 0.925rem;
     }
     
     .student-info,
     .grades-section,
     .summary-section,
     .report-footer {
-        padding: 24px;
+        padding: 20px;
     }
     
     .student-card {
-        padding: 24px;
+        padding: 20px;
     }
     
     .info-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 12px;
     }
     
     .info-item {
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
-        padding: 16px;
+        gap: 6px;
+        padding: 12px;
     }
     
     .grades-table {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
     }
     
     .grades-table th,
@@ -420,7 +352,7 @@ body {
     
     .signature-section {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 16px;
     }
     
     .summary-grid {
@@ -428,26 +360,25 @@ body {
     }
     
     .summary-item {
-        padding: 24px;
+        padding: 20px;
     }
 }
 
 @media (max-width: 480px) {
     body {
-        padding: 12px;
+        padding: 8px;
     }
     
     .report-header {
-        padding: 24px 16px;
+        padding: 20px 16px;
     }
     
     .report-header h1 {
-        font-size: 1.75rem;
-        letter-spacing: -0.025em;
+        font-size: 1.625rem;
     }
     
     .school-info h2 {
-        font-size: 1.125rem;
+        font-size: 1rem;
     }
     
     .student-info,
@@ -458,7 +389,7 @@ body {
     }
     
     .student-card {
-        padding: 20px;
+        padding: 16px;
     }
     
     .grades-table th,
@@ -468,11 +399,11 @@ body {
     }
     
     .summary-item {
-        padding: 20px;
+        padding: 16px;
     }
     
     .summary-value {
-        font-size: 1.875rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -491,48 +422,29 @@ body {
     }
     
     .report-header {
-        background: #f8f9fa !important;
-        color: #1a1a1a !important;
-    }
-    
-    .report-header::before {
-        display: none;
+        background: #f8fafc !important;
+        color: #2d3748 !important;
     }
     
     .report-footer {
-        background: #f8f9fa !important;
-        color: #1a1a1a !important;
+        background: #f8fafc !important;
+        color: #2d3748 !important;
     }
     
     .grades-table thead {
-        background: #f8f9fa !important;
-        color: #1a1a1a !important;
+        background: #f8fafc !important;
     }
     
     .grade {
-        background: #e5e7eb !important;
-        color: #1a1a1a !important;
-        border: 1px solid #d1d5db;
-        box-shadow: none;
+        background: #e2e8f0 !important;
+        color: #2d3748 !important;
+        border: 1px solid #cbd5e0;
     }
     
-    .summary-item {
-        box-shadow: none;
-        border: 1px solid #d1d5db;
-    }
-    
-    .student-card {
-        border: 1px solid #d1d5db;
-        box-shadow: none;
-    }
-    
-    .info-item {
-        border: 1px solid #e5e7eb;
-        box-shadow: none;
-    }
-    
+    .summary-item,
+    .student-card,
+    .info-item,
     .signature {
-        background: #f8f9fa !important;
-        border: 1px solid #d1d5db !important;
+        border: 1px solid #cbd5e0;
     }
 }
